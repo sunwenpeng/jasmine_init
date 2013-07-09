@@ -40,5 +40,18 @@ Game.compare_to_number = function (number1, number2) {
 };
 
 
+Game.generate_4_bit_number = function () {
+
+    var random_numbers = "";
+    for(var i = 0; i < 4 ; ) {
+        var number = parseInt(Math.random()*10);
+        if(random_numbers.indexOf(number) == -1)
+        {
+            random_numbers +=  number;
+            i += 1;
+        }
+    }
+    return random_numbers;
+};
 
 
