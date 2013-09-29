@@ -11,13 +11,20 @@
 
   <!-- include source files here... -->
   
-  <script type="text/javascript" src="spec/hello_world_spec.js"></script>
+  <script type="text/javascript" src="spec/button_test.js"></script>
+    <script type="text/javascript" src="spec/compare_test.js"></script>
+    <script type="text/javascript" src="spec/guessNumber_test.js"></script>
+    <script type="text/javascript" src="spec/integration_test.js"></script>
+    <script type="text/javascript" src="spec/random_num_test.js"></script>
 
 
   <!-- include spec files here... -->
   <script type="text/javascript" src="src/hello_world.js"></script>
+    <script type="text/javascript" src="src/button.js"></script>
+    <script type="text/javascript" src="src/compare.js"></script>
+    <script type="text/javascript" src="src/random_num.js"></script>
 
-  <script type="text/javascript">
+    <script type="text/javascript">
     (function() {
       var jasmineEnv = jasmine.getEnv();
       jasmineEnv.updateInterval = 1000;
@@ -49,5 +56,16 @@
 </head>
 
 <body>
+
+
+<input type="button" value="点击产生一个随机四位" onClick="btn_click()">
+<span id="txt1" style="display: none">已经产生一个随机数！</span>
+
+请输入您猜测的四位数字:
+<input type="text" id="guess" name="firstname"/>
+<button onclick="btn_click_1()">确认</button>
+<span id="txt2">猜测结果:</span>
+<span id="txt3" style="display: none"/>
+<br/>
 </body>
 </html>
